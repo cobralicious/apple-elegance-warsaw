@@ -1,32 +1,14 @@
 import { useTranslation } from 'react-i18next';
-import { ProductCard } from '@/components/ProductCard';
-import imacImage from '@/assets/imac-24-blue.jpg';
-
-const iMacProducts = [
-  {
-    id: 'imac-24',
-    name: 'iMac 24"',
-    price: 1499,
-    image: imacImage,
-    category: 'imac',
-    description: 'Packed with the power of M3',
-    isNew: true,
-    colors: ['#4285f4', '#34a853', '#fbbc05', '#ea4335', '#ff6d01', '#af52de', '#1d1d1f']
-  },
-  {
-    id: 'imac-24-base',
-    name: 'iMac 24" (Base)',
-    price: 1299,
-    originalPrice: 1399,
-    image: '/api/placeholder/400/400',
-    category: 'imac',
-    description: 'Beautiful all-in-one with M3 chip',
-    colors: ['#4285f4', '#34a853', '#fbbc05', '#ea4335']
-  }
-];
+import { ProductGrid } from '@/components/ProductGrid';
+import { ProductFilter } from '@/components/ProductFilter';
+import { Footer } from '@/components/Footer';
+import { useProducts } from '@/hooks/useProducts';
 
 const IMac = () => {
   const { t } = useTranslation();
+  const { products, filters, updateFilters, resetFilters, stats } = useProducts({
+    category: 'imac'
+  });
 
   return (
     <div className="min-h-screen pt-16">
@@ -39,28 +21,53 @@ const IMac = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             {t('products.imac.description')} — Stunning design meets incredible performance.
           </p>
+          
+          <div className="flex justify-center items-center gap-8 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span>{stats.inStock} models in stock</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <span>7 vibrant colors</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Products Grid */}
+      {/* Products Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Choose Your iMac</h2>
-            <p className="text-xl text-muted-foreground">
-              All-in-one desktop perfection in vibrant colors
-            </p>
+          <div className="mb-8">
+            <ProductFilter
+              filters={filters}
+              onFiltersChange={updateFilters}
+              onResetFilters={resetFilters}
+              resultCount={stats.filtered}
+            />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {iMacProducts.map((product, index) => (
-              <div key={product.id} style={{ animationDelay: `${index * 100}ms` }}>
-                <ProductCard {...product} />
-              </div>
-            ))}
-          </div>
+          <ProductGrid products={products} />
+
+          {products.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-6xl mb-4">🖥️</div>
+              <h3 className="text-2xl font-bold mb-2">No iMacs found</h3>
+              <p className="text-muted-foreground mb-4">
+                Try adjusting your filters to see more results
+              </p>
+              <button
+                onClick={resetFilters}
+                className="btn-outline-elegant"
+              >
+                Reset Filters
+              </button>
+            </div>
+          )}
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

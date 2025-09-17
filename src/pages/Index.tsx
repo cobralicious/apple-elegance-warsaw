@@ -1,65 +1,53 @@
 import { useTranslation } from 'react-i18next';
 import { Hero } from '@/components/Hero';
-import { ProductCard } from '@/components/ProductCard';
-import iphoneImage from '@/assets/iphone-15-pro-max.jpg';
-import macbookImage from '@/assets/macbook-pro-14.jpg';
-import watchImage from '@/assets/apple-watch-series-9.jpg';
-import imacImage from '@/assets/imac-24-blue.jpg';
-
-// Mock product data with random prices
-const featuredProducts = [
-  {
-    id: '1',
-    name: 'iPhone 15 Pro Max',
-    price: 1299,
-    originalPrice: 1399,
-    image: iphoneImage,
-    category: 'iphone',
-    description: 'Titanium. So strong. So light. So Pro.',
-    isNew: true,
-    colors: ['#1d1d1f', '#f5f5dc', '#4a4a4a', '#8b7355']
-  },
-  {
-    id: '2',
-    name: 'MacBook Pro 14"',
-    price: 1999,
-    image: macbookImage,
-    category: 'macbook',
-    description: 'Supercharged by M3 Pro and M3 Max',
-    colors: ['#1d1d1f', '#c0c0c0']
-  },
-  {
-    id: '3',
-    name: 'Apple Watch Series 9',
-    price: 429,
-    originalPrice: 499,
-    image: watchImage,
-    category: 'watch',
-    description: 'Smarter. Brighter. Mightier.',
-    colors: ['#1d1d1f', '#f5f5dc', '#8b0000', '#000080']
-  },
-  {
-    id: '4',
-    name: 'iMac 24"',
-    price: 1499,
-    image: imacImage,
-    category: 'imac',
-    description: 'Packed with the power of M3',
-    isNew: true,
-    colors: ['#4285f4', '#34a853', '#fbbc05', '#ea4335', '#ff6d01', '#af52de', '#1d1d1f']
-  }
-];
+import { ProductGrid } from '@/components/ProductGrid';
+import { AnimatedCounter } from '@/components/AnimatedCounter';
+import { Footer } from '@/components/Footer';
+import { getFeaturedProducts, getNewProducts } from '@/data/products';
+import { TrendingUp, Users, Award, Zap } from 'lucide-react';
 
 const Index = () => {
   const { t } = useTranslation();
+  const featuredProducts = getFeaturedProducts();
+  const newProducts = getNewProducts();
 
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <Hero />
 
-      {/* Featured Products Section */}
+      {/* Stats Section */}
       <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+            {[
+              { icon: TrendingUp, value: 25, suffix: '+', label: 'Product Models' },
+              { icon: Users, value: 10000, suffix: '+', label: 'Happy Customers' },
+              { icon: Award, value: 3, suffix: ' Years', label: 'Experience' },
+              { icon: Zap, value: 24, suffix: '/7', label: 'Support' }
+            ].map((stat, index) => (
+              <div
+                key={stat.label}
+                className="text-center product-card p-8 animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <stat.icon className="h-8 w-8 text-primary mx-auto mb-4" />
+                <div className="text-3xl font-bold text-primary mb-2">
+                  <AnimatedCounter 
+                    end={stat.value} 
+                    suffix={stat.suffix}
+                    duration={2000 + index * 200}
+                  />
+                </div>
+                <div className="text-muted-foreground font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products Section */}
+      <section className="py-20 bg-gradient-secondary">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -70,11 +58,23 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} {...product} />
-            ))}
+          <ProductGrid products={featuredProducts} />
+        </div>
+      </section>
+
+      {/* New Products Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Latest Arrivals
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              Be the first to experience Apple's newest innovations
+            </p>
           </div>
+
+          <ProductGrid products={newProducts.slice(0, 8)} />
         </div>
       </section>
 
@@ -92,26 +92,60 @@ const Index = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { name: t('products.iphone.title'), description: t('products.iphone.description'), path: '/iphone', emoji: '📱' },
-              { name: t('products.macbook.title'), description: t('products.macbook.description'), path: '/macbook', emoji: '💻' },
-              { name: t('products.watch.title'), description: t('products.watch.description'), path: '/watch', emoji: '⌚' },
-              { name: t('products.imac.title'), description: t('products.imac.description'), path: '/imac', emoji: '🖥️' }
+              { 
+                name: t('products.iphone.title'), 
+                description: t('products.iphone.description'), 
+                path: '/iphone', 
+                emoji: '📱',
+                count: '10+ models'
+              },
+              { 
+                name: t('products.macbook.title'), 
+                description: t('products.macbook.description'), 
+                path: '/macbook', 
+                emoji: '💻',
+                count: '8+ models'
+              },
+              { 
+                name: t('products.watch.title'), 
+                description: t('products.watch.description'), 
+                path: '/watch', 
+                emoji: '⌚',
+                count: '8+ models'
+              },
+              { 
+                name: t('products.imac.title'), 
+                description: t('products.imac.description'), 
+                path: '/imac', 
+                emoji: '🖥️',
+                count: '4+ models'
+              }
             ].map((category, index) => (
               <a
                 key={category.path}
                 href={category.path}
-                className="product-card group cursor-pointer bg-card p-8 text-center animate-fade-in-up"
+                className="product-card group cursor-pointer bg-card p-8 text-center animate-fade-in-up relative overflow-hidden"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {category.emoji}
+                {/* Background Pattern */}
+                <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,theme(colors.primary.DEFAULT)_1px,transparent_1px)] [background-size:20px_20px]" />
                 </div>
-                <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
-                  {category.name}
-                </h3>
-                <p className="text-muted-foreground">
-                  {category.description}
-                </p>
+
+                <div className="relative z-10">
+                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                    {category.emoji}
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                    {category.name}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    {category.description}
+                  </p>
+                  <div className="text-sm text-primary font-semibold">
+                    {category.count}
+                  </div>
+                </div>
               </a>
             ))}
           </div>
@@ -154,6 +188,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

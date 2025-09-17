@@ -1,5 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Award, Users, Shield, Clock } from 'lucide-react';
+import { Footer } from '@/components/Footer';
+import { AnimatedCounter } from '@/components/AnimatedCounter';
 
 const About = () => {
   const { t } = useTranslation();
@@ -18,8 +20,38 @@ const About = () => {
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Stats Section */}
       <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+            {[
+              { icon: Users, value: 10000, suffix: '+', label: 'Happy Customers' },
+              { icon: Award, value: 25, suffix: '+', label: 'Product Models' },
+              { icon: Shield, value: 100, suffix: '%', label: 'Authentic Products' },
+              { icon: Clock, value: 24, suffix: '/7', label: 'Support' }
+            ].map((stat, index) => (
+              <div
+                key={stat.label}
+                className="text-center product-card p-8 animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <stat.icon className="h-12 w-12 text-primary mx-auto mb-4" />
+                <div className="text-4xl font-bold text-primary mb-2">
+                  <AnimatedCounter 
+                    end={stat.value} 
+                    suffix={stat.suffix}
+                    duration={2000 + index * 200}
+                  />
+                </div>
+                <div className="text-muted-foreground font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Story Section */}
+      <section className="py-20 bg-gradient-secondary">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="glass p-12 rounded-3xl mb-16">
@@ -83,7 +115,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-gradient-secondary">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-8">Our Values</h2>
@@ -115,6 +147,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

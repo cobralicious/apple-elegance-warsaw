@@ -1,43 +1,14 @@
 import { useTranslation } from 'react-i18next';
-import { ProductCard } from '@/components/ProductCard';
-import watchImage from '@/assets/apple-watch-series-9.jpg';
-
-const watchProducts = [
-  {
-    id: 'watch-series-9',
-    name: 'Apple Watch Series 9',
-    price: 429,
-    originalPrice: 499,
-    image: watchImage,
-    category: 'watch',
-    description: 'Smarter. Brighter. Mightier.',
-    isNew: true,
-    colors: ['#1d1d1f', '#f5f5dc', '#8b0000', '#000080', '#ff69b4']
-  },
-  {
-    id: 'watch-ultra-2',
-    name: 'Apple Watch Ultra 2',
-    price: 799,
-    image: '/api/placeholder/400/400',
-    category: 'watch',
-    description: 'The most rugged and capable Apple Watch',
-    isNew: true,
-    colors: ['#ff6600']
-  },
-  {
-    id: 'watch-se',
-    name: 'Apple Watch SE',
-    price: 279,
-    originalPrice: 329,
-    image: '/api/placeholder/400/400',
-    category: 'watch',
-    description: 'Essential features at an incredible price',
-    colors: ['#1d1d1f', '#c0c0c0', '#8b0000']
-  }
-];
+import { ProductGrid } from '@/components/ProductGrid';
+import { ProductFilter } from '@/components/ProductFilter';
+import { Footer } from '@/components/Footer';
+import { useProducts } from '@/hooks/useProducts';
 
 const Watch = () => {
   const { t } = useTranslation();
+  const { products, filters, updateFilters, resetFilters, stats } = useProducts({
+    category: 'watch'
+  });
 
   return (
     <div className="min-h-screen pt-16">
@@ -50,28 +21,53 @@ const Watch = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             {t('products.watch.description')} — Your essential companion for a healthy life.
           </p>
+          
+          <div className="flex justify-center items-center gap-8 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span>{stats.inStock} models in stock</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+              <span>Health monitoring</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Products Grid */}
+      {/* Products Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Choose Your Apple Watch</h2>
-            <p className="text-xl text-muted-foreground">
-              From fitness tracking to advanced health monitoring
-            </p>
+          <div className="mb-8">
+            <ProductFilter
+              filters={filters}
+              onFiltersChange={updateFilters}
+              onResetFilters={resetFilters}
+              resultCount={stats.filtered}
+            />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {watchProducts.map((product, index) => (
-              <div key={product.id} style={{ animationDelay: `${index * 100}ms` }}>
-                <ProductCard {...product} />
-              </div>
-            ))}
-          </div>
+          <ProductGrid products={products} />
+
+          {products.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-6xl mb-4">⌚</div>
+              <h3 className="text-2xl font-bold mb-2">No Apple Watches found</h3>
+              <p className="text-muted-foreground mb-4">
+                Try adjusting your filters to see more results
+              </p>
+              <button
+                onClick={resetFilters}
+                className="btn-outline-elegant"
+              >
+                Reset Filters
+              </button>
+            </div>
+          )}
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

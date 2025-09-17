@@ -2,6 +2,9 @@ import { useTranslation } from 'react-i18next';
 import { ShoppingCart, Plus, Minus, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Footer } from '@/components/Footer';
+import iphoneImage from '@/assets/iphone-15-pro-max.jpg';
+import macbookImage from '@/assets/macbook-pro-14.jpg';
 
 const Cart = () => {
   const { t } = useTranslation();
@@ -13,7 +16,7 @@ const Cart = () => {
       name: 'iPhone 15 Pro Max',
       price: 1299,
       quantity: 1,
-      image: '/api/placeholder/200/200',
+      image: iphoneImage,
       color: 'Natural Titanium'
     },
     {
@@ -21,7 +24,7 @@ const Cart = () => {
       name: 'MacBook Pro 14"',
       price: 1999,
       quantity: 1,
-      image: '/api/placeholder/200/200',
+      image: macbookImage,
       color: 'Space Black'
     }
   ];
@@ -152,6 +155,8 @@ const Cart = () => {
           )}
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

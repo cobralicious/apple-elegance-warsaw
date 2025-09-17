@@ -1,52 +1,14 @@
 import { useTranslation } from 'react-i18next';
-import { ProductCard } from '@/components/ProductCard';
-import macbookImage from '@/assets/macbook-pro-14.jpg';
-
-const macBookProducts = [
-  {
-    id: 'macbook-pro-16',
-    name: 'MacBook Pro 16"',
-    price: 2499,
-    originalPrice: 2699,
-    image: macbookImage,
-    category: 'macbook',
-    description: 'M3 Max chip with up to 40-core GPU',
-    isNew: true,
-    colors: ['#1d1d1f', '#c0c0c0']
-  },
-  {
-    id: 'macbook-pro-14',
-    name: 'MacBook Pro 14"',
-    price: 1999,
-    image: '/api/placeholder/400/400',
-    category: 'macbook',
-    description: 'Supercharged by M3 Pro and M3 Max',
-    isNew: true,
-    colors: ['#1d1d1f', '#c0c0c0']
-  },
-  {
-    id: 'macbook-air-15',
-    name: 'MacBook Air 15"',
-    price: 1299,
-    image: '/api/placeholder/400/400',
-    category: 'macbook',
-    description: 'Impressively big. Impossibly thin.',
-    colors: ['#1d1d1f', '#c0c0c0', '#ffd700', '#87ceeb']
-  },
-  {
-    id: 'macbook-air-13',
-    name: 'MacBook Air 13"',
-    price: 1099,
-    originalPrice: 1199,
-    image: '/api/placeholder/400/400',
-    category: 'macbook',
-    description: 'Lean. Mean. M3 machine.',
-    colors: ['#1d1d1f', '#c0c0c0', '#ffd700', '#87ceeb']
-  }
-];
+import { ProductGrid } from '@/components/ProductGrid';
+import { ProductFilter } from '@/components/ProductFilter';
+import { Footer } from '@/components/Footer';
+import { useProducts } from '@/hooks/useProducts';
 
 const MacBook = () => {
   const { t } = useTranslation();
+  const { products, filters, updateFilters, resetFilters, stats } = useProducts({
+    category: 'macbook'
+  });
 
   return (
     <div className="min-h-screen pt-16">
@@ -59,28 +21,53 @@ const MacBook = () => {
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             {t('products.macbook.description')} — Professional performance meets incredible portability.
           </p>
+          
+          <div className="flex justify-center items-center gap-8 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span>{stats.inStock} models in stock</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+              <span>M3 chip performance</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Products Grid */}
+      {/* Products Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Choose Your MacBook</h2>
-            <p className="text-xl text-muted-foreground">
-              From Air to Pro — find the perfect Mac for your workflow
-            </p>
+          <div className="mb-8">
+            <ProductFilter
+              filters={filters}
+              onFiltersChange={updateFilters}
+              onResetFilters={resetFilters}
+              resultCount={stats.filtered}
+            />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {macBookProducts.map((product, index) => (
-              <div key={product.id} style={{ animationDelay: `${index * 100}ms` }}>
-                <ProductCard {...product} />
-              </div>
-            ))}
-          </div>
+          <ProductGrid products={products} />
+
+          {products.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-6xl mb-4">💻</div>
+              <h3 className="text-2xl font-bold mb-2">No MacBooks found</h3>
+              <p className="text-muted-foreground mb-4">
+                Try adjusting your filters to see more results
+              </p>
+              <button
+                onClick={resetFilters}
+                className="btn-outline-elegant"
+              >
+                Reset Filters
+              </button>
+            </div>
+          )}
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
