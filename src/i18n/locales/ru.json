@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "Главная",
+    "iphone": "iPhone",
+    "macbook": "MacBook", 
+    "watch": "Apple Watch",
+    "imac": "iMac",
+    "cart": "Корзина",
+    "about": "О нас",
+    "contact": "Контакты"
+  },
+  "hero": {
+    "title": "Премиум Apple Store",
+    "subtitle": "Варшава",
+    "description": "Откройте для себя новейшие iPhone, MacBook, Apple Watch и iMac. Премиум качество, конкурентные цены, исключительное обслуживание.",
+    "shopNow": "Купить сейчас",
+    "learnMore": "Узнать больше"
+  },
+  "products": {
+    "iphone": {
+      "title": "iPhone",
+      "description": "Самый продвинутый iPhone"
+    },
+    "macbook": {
+      "title": "MacBook",
+      "description": "Мощность. Она в воздухе"
+    },
+    "watch": {
+      "title": "Apple Watch",
+      "description": "Ваше здоровье. На вашем запястье"
+    },
+    "imac": {
+      "title": "iMac",
+      "description": "Всё в одном великолепие"
+    }
+  },
+  "features": {
+    "quality": "Премиум качество",
+    "warranty": "Официальная гарантия",
+    "delivery": "Быстрая доставка",
+    "support": "Поддержка 24/7"
+  },
+  "location": {
+    "title": "Посетите наш магазин",
+    "address": "Apple Store Варшава",
+    "street": "Новы Свят 123",
+    "city": "00-001 Варшава, Польша",
+    "phone": "+48 22 123 45 67",
+    "email": "info@applestore-warsaw.com"
+  },
+  "cart": {
+    "title": "Корзина покупок",
+    "empty": "Ваша корзина пуста",
+    "total": "Итого",
+    "checkout": "Оформить заказ"
+  }
+}

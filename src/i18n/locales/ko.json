@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "홈",
+    "iphone": "iPhone",
+    "macbook": "MacBook", 
+    "watch": "Apple Watch",
+    "imac": "iMac",
+    "cart": "장바구니",
+    "about": "회사소개",
+    "contact": "연락처"
+  },
+  "hero": {
+    "title": "프리미엄 Apple Store",
+    "subtitle": "바르샤바",
+    "description": "최신 iPhone, MacBook, Apple Watch, iMac을 만나보세요. 프리미엄 품질, 경쟁력 있는 가격, 뛰어난 서비스.",
+    "shopNow": "지금 구매",
+    "learnMore": "자세히 보기"
+  },
+  "products": {
+    "iphone": {
+      "title": "iPhone",
+      "description": "지금까지 가장 진보된 iPhone"
+    },
+    "macbook": {
+      "title": "MacBook",
+      "description": "파워. 공기 중에 있습니다"
+    },
+    "watch": {
+      "title": "Apple Watch",
+      "description": "당신의 건강. 손목 위에"
+    },
+    "imac": {
+      "title": "iMac",
+      "description": "올인원의 탁월함"
+    }
+  },
+  "features": {
+    "quality": "프리미엄 품질",
+    "warranty": "공식 보증",
+    "delivery": "빠른 배송",
+    "support": "24시간 지원"
+  },
+  "location": {
+    "title": "매장 방문",
+    "address": "Apple Store 바르샤바",
+    "street": "노비 시비아트 123",
+    "city": "00-001 바르샤바, 폴란드",
+    "phone": "+48 22 123 45 67",
+    "email": "info@applestore-warsaw.com"
+  },
+  "cart": {
+    "title": "쇼핑 카트",
+    "empty": "장바구니가 비어있습니다",
+    "total": "총합",
+    "checkout": "결제하기"
+  }
+}

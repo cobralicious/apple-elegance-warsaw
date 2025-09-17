@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "首页",
+    "iphone": "iPhone",
+    "macbook": "MacBook", 
+    "watch": "Apple Watch",
+    "imac": "iMac",
+    "cart": "购物车",
+    "about": "关于我们",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "title": "高端 Apple Store",
+    "subtitle": "华沙",
+    "description": "探索最新的iPhone、MacBook、Apple Watch和iMac。高端品质，有竞争力的价格，卓越的服务。",
+    "shopNow": "立即购买",
+    "learnMore": "了解更多"
+  },
+  "products": {
+    "iphone": {
+      "title": "iPhone",
+      "description": "迄今为止最先进的iPhone"
+    },
+    "macbook": {
+      "title": "MacBook",
+      "description": "动力。就在空气中"
+    },
+    "watch": {
+      "title": "Apple Watch",
+      "description": "您的健康。在您的手腕上"
+    },
+    "imac": {
+      "title": "iMac",
+      "description": "一体机的辉煌"
+    }
+  },
+  "features": {
+    "quality": "高端品质",
+    "warranty": "官方保修",
+    "delivery": "快速送达",
+    "support": "24/7 支持"
+  },
+  "location": {
+    "title": "访问我们的商店",
+    "address": "Apple Store 华沙",
+    "street": "新世界街 123号",
+    "city": "00-001 华沙，波兰",
+    "phone": "+48 22 123 45 67",
+    "email": "info@applestore-warsaw.com"
+  },
+  "cart": {
+    "title": "购物车",
+    "empty": "您的购物车是空的",
+    "total": "总计",
+    "checkout": "结账"
+  }
+}

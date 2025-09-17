@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "Koti",
+    "iphone": "iPhone",
+    "macbook": "MacBook", 
+    "watch": "Apple Watch",
+    "imac": "iMac",
+    "cart": "Ostoskori",
+    "about": "Tietoa meistä",
+    "contact": "Yhteystiedot"
+  },
+  "hero": {
+    "title": "Premium Apple Store",
+    "subtitle": "Varsova",
+    "description": "Tutustu uusimpiin iPhone-, MacBook-, Apple Watch- ja iMac-laitteisiin. Premium-laatua, kilpailukykyiset hinnat, poikkeuksellista palvelua.",
+    "shopNow": "Osta nyt",
+    "learnMore": "Lue lisää"
+  },
+  "products": {
+    "iphone": {
+      "title": "iPhone",
+      "description": "Edistyksellisin iPhone tähän mennessä"
+    },
+    "macbook": {
+      "title": "MacBook",
+      "description": "Voimaa. Se on ilmassa"
+    },
+    "watch": {
+      "title": "Apple Watch",
+      "description": "Terveytesi. Ranteessasi"
+    },
+    "imac": {
+      "title": "iMac",
+      "description": "Kaikki yhdessä -loistoa"
+    }
+  },
+  "features": {
+    "quality": "Premium-laatu",
+    "warranty": "Virallinen takuu",
+    "delivery": "Nopea toimitus",
+    "support": "24/7 Tuki"
+  },
+  "location": {
+    "title": "Vieraile liikkeessämme",
+    "address": "Apple Store Varsova",
+    "street": "Nowy Świat 123",
+    "city": "00-001 Varsova, Puola",
+    "phone": "+48 22 123 45 67",
+    "email": "info@applestore-warsaw.com"
+  },
+  "cart": {
+    "title": "Ostoskori",
+    "empty": "Ostoskorisi on tyhjä",
+    "total": "Yhteensä",
+    "checkout": "Kassalle"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "Home",
+    "iphone": "iPhone",
+    "macbook": "MacBook", 
+    "watch": "Apple Watch",
+    "imac": "iMac",
+    "cart": "Winkelwagen",
+    "about": "Over ons",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Premium Apple Store",
+    "subtitle": "Warschau",
+    "description": "Ontdek de nieuwste iPhone, MacBook, Apple Watch en iMac. Premium kwaliteit, concurrerende prijzen, uitzonderlijke service.",
+    "shopNow": "Nu kopen",
+    "learnMore": "Meer weten"
+  },
+  "products": {
+    "iphone": {
+      "title": "iPhone",
+      "description": "De meest geavanceerde iPhone ooit"
+    },
+    "macbook": {
+      "title": "MacBook",
+      "description": "Kracht. Het zit in de lucht"
+    },
+    "watch": {
+      "title": "Apple Watch",
+      "description": "Uw gezondheid. Om uw pols"
+    },
+    "imac": {
+      "title": "iMac",
+      "description": "Alles-in-één briljantie"
+    }
+  },
+  "features": {
+    "quality": "Premium Kwaliteit",
+    "warranty": "Officiële garantie",
+    "delivery": "Snelle levering",
+    "support": "24/7 Ondersteuning"
+  },
+  "location": {
+    "title": "Bezoek onze winkel",
+    "address": "Apple Store Warschau",
+    "street": "Nowy Świat 123",
+    "city": "00-001 Warschau, Polen",
+    "phone": "+48 22 123 45 67",
+    "email": "info@applestore-warsaw.com"
+  },
+  "cart": {
+    "title": "Winkelwagen",
+    "empty": "Uw winkelwagen is leeg",
+    "total": "Totaal",
+    "checkout": "Afrekenen"
+  }
+}

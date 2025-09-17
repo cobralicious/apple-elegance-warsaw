@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "iphone": "آيفون",
+    "macbook": "ماك بوك", 
+    "watch": "آبل واتش",
+    "imac": "آي ماك",
+    "cart": "السلة",
+    "about": "حولنا",
+    "contact": "اتصل بنا"
+  },
+  "hero": {
+    "title": "متجر آبل الفاخر",
+    "subtitle": "وارسو",
+    "description": "اكتشف أحدث أجهزة آيفون وماك بوك وآبل واتش وآي ماك. جودة فائقة وأسعار تنافسية وخدمة استثنائية.",
+    "shopNow": "تسوق الآن",
+    "learnMore": "اعرف المزيد"
+  },
+  "products": {
+    "iphone": {
+      "title": "آيفون",
+      "description": "أكثر أجهزة آيفون تطوراً حتى الآن"
+    },
+    "macbook": {
+      "title": "ماك بوك",
+      "description": "القوة. إنها في الهواء"
+    },
+    "watch": {
+      "title": "آبل واتش",
+      "description": "صحتك. على معصمك"
+    },
+    "imac": {
+      "title": "آي ماك",
+      "description": "تألق الكل في واحد"
+    }
+  },
+  "features": {
+    "quality": "جودة فائقة",
+    "warranty": "ضمان رسمي",
+    "delivery": "توصيل سريع",
+    "support": "دعم 24/7"
+  },
+  "location": {
+    "title": "زر متجرنا",
+    "address": "متجر آبل وارسو",
+    "street": "نوفي شفيات 123",
+    "city": "00-001 وارسو، بولندا",
+    "phone": "+48 22 123 45 67",
+    "email": "info@applestore-warsaw.com"
+  },
+  "cart": {
+    "title": "سلة التسوق",
+    "empty": "سلتك فارغة",
+    "total": "المجموع",
+    "checkout": "الدفع"
+  }
+}

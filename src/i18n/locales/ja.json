@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "iphone": "iPhone",
+    "macbook": "MacBook", 
+    "watch": "Apple Watch",
+    "imac": "iMac",
+    "cart": "カート",
+    "about": "会社概要",
+    "contact": "お問い合わせ"
+  },
+  "hero": {
+    "title": "プレミアム Apple Store",
+    "subtitle": "ワルシャワ",
+    "description": "最新のiPhone、MacBook、Apple Watch、iMacをご覧ください。プレミアム品質、競争力のある価格、卓越したサービス。",
+    "shopNow": "今すぐ購入",
+    "learnMore": "詳細を見る"
+  },
+  "products": {
+    "iphone": {
+      "title": "iPhone",
+      "description": "これまでで最も先進的なiPhone"
+    },
+    "macbook": {
+      "title": "MacBook",
+      "description": "パワー。それは空気の中に"
+    },
+    "watch": {
+      "title": "Apple Watch",
+      "description": "あなたの健康。あなたの手首に"
+    },
+    "imac": {
+      "title": "iMac",
+      "description": "オールインワンの輝き"
+    }
+  },
+  "features": {
+    "quality": "プレミアム品質",
+    "warranty": "公式保証",
+    "delivery": "迅速配送",
+    "support": "24時間サポート"
+  },
+  "location": {
+    "title": "店舗にお越しください",
+    "address": "Apple Store ワルシャワ",
+    "street": "ノヴィ・シフィアト 123",
+    "city": "00-001 ワルシャワ、ポーランド",
+    "phone": "+48 22 123 45 67",
+    "email": "info@applestore-warsaw.com"
+  },
+  "cart": {
+    "title": "ショッピングカート",
+    "empty": "カートは空です",
+    "total": "合計",
+    "checkout": "チェックアウト"
+  }
+}

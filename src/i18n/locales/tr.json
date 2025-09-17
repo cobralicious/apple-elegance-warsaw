@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "iphone": "iPhone",
+    "macbook": "MacBook", 
+    "watch": "Apple Watch",
+    "imac": "iMac",
+    "cart": "Sepet",
+    "about": "Hakkımızda",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "Premium Apple Store",
+    "subtitle": "Varşova",
+    "description": "En yeni iPhone, MacBook, Apple Watch ve iMac'leri keşfedin. Premium kalite, rekabetçi fiyatlar, olağanüstü hizmet.",
+    "shopNow": "Şimdi Satın Al",
+    "learnMore": "Daha Fazla Öğren"
+  },
+  "products": {
+    "iphone": {
+      "title": "iPhone",
+      "description": "Şimdiye kadarki en gelişmiş iPhone"
+    },
+    "macbook": {
+      "title": "MacBook",
+      "description": "Güç. Havada"
+    },
+    "watch": {
+      "title": "Apple Watch",
+      "description": "Sağlığınız. Bileğinizde"
+    },
+    "imac": {
+      "title": "iMac",
+      "description": "Hepsi bir arada mükemmellik"
+    }
+  },
+  "features": {
+    "quality": "Premium Kalite",
+    "warranty": "Resmi Garanti",
+    "delivery": "Hızlı Teslimat",
+    "support": "7/24 Destek"
+  },
+  "location": {
+    "title": "Mağazamızı Ziyaret Edin",
+    "address": "Apple Store Varşova",
+    "street": "Nowy Świat 123",
+    "city": "00-001 Varşova, Polonya",
+    "phone": "+48 22 123 45 67",
+    "email": "info@applestore-warsaw.com"
+  },
+  "cart": {
+    "title": "Alışveriş Sepeti",
+    "empty": "Sepetiniz boş",
+    "total": "Toplam",
+    "checkout": "Ödeme"
+  }
+}

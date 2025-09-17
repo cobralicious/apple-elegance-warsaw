@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "होम",
+    "iphone": "iPhone",
+    "macbook": "MacBook", 
+    "watch": "Apple Watch",
+    "imac": "iMac",
+    "cart": "कार्ट",
+    "about": "हमारे बारे में",
+    "contact": "संपर्क"
+  },
+  "hero": {
+    "title": "प्रीमियम Apple Store",
+    "subtitle": "वारसॉ",
+    "description": "नवीनतम iPhone, MacBook, Apple Watch और iMac की खोज करें। प्रीमियम गुणवत्ता, प्रतिस्पर्धी कीमतें, असाधारण सेवा।",
+    "shopNow": "अभी खरीदें",
+    "learnMore": "और जानें"
+  },
+  "products": {
+    "iphone": {
+      "title": "iPhone",
+      "description": "अब तक का सबसे उन्नत iPhone"
+    },
+    "macbook": {
+      "title": "MacBook",
+      "description": "शक्ति। यह हवा में है"
+    },
+    "watch": {
+      "title": "Apple Watch",
+      "description": "आपका स्वास्थ्य। आपकी कलाई पर"
+    },
+    "imac": {
+      "title": "iMac",
+      "description": "ऑल-इन-वन प्रतिभा"
+    }
+  },
+  "features": {
+    "quality": "प्रीमियम गुणवत्ता",
+    "warranty": "आधिकारिक वारंटी",
+    "delivery": "तेज़ डिलीवरी",
+    "support": "24/7 सहायता"
+  },
+  "location": {
+    "title": "हमारे स्टोर पर आएं",
+    "address": "Apple Store वारसॉ",
+    "street": "नोवी श्वात 123",
+    "city": "00-001 वारसॉ, पोलैंड",
+    "phone": "+48 22 123 45 67",
+    "email": "info@applestore-warsaw.com"
+  },
+  "cart": {
+    "title": "शॉपिंग कार्ट",
+    "empty": "आपका कार्ट खाली है",
+    "total": "कुल",
+    "checkout": "चेकआउट"
+  }
+}

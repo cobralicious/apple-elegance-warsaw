@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "iphone": "iPhone",
+    "macbook": "MacBook", 
+    "watch": "Apple Watch",
+    "imac": "iMac",
+    "cart": "Warenkorb",
+    "about": "Über uns",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Premium Apple Store",
+    "subtitle": "Warschau",
+    "description": "Entdecken Sie die neuesten iPhone, MacBook, Apple Watch und iMac. Premium-Qualität, wettbewerbsfähige Preise, außergewöhnlicher Service.",
+    "shopNow": "Jetzt kaufen",
+    "learnMore": "Mehr erfahren"
+  },
+  "products": {
+    "iphone": {
+      "title": "iPhone",
+      "description": "Das fortschrittlichste iPhone aller Zeiten"
+    },
+    "macbook": {
+      "title": "MacBook",
+      "description": "Power. Es liegt in der Luft"
+    },
+    "watch": {
+      "title": "Apple Watch",
+      "description": "Ihre Gesundheit. An Ihrem Handgelenk"
+    },
+    "imac": {
+      "title": "iMac",
+      "description": "All-in-One Brillanz"
+    }
+  },
+  "features": {
+    "quality": "Premium-Qualität",
+    "warranty": "Offizielle Garantie",
+    "delivery": "Schnelle Lieferung",
+    "support": "24/7 Support"
+  },
+  "location": {
+    "title": "Besuchen Sie unser Geschäft",
+    "address": "Apple Store Warschau",
+    "street": "Nowy Świat 123",
+    "city": "00-001 Warschau, Polen",
+    "phone": "+48 22 123 45 67",
+    "email": "info@applestore-warsaw.com"
+  },
+  "cart": {
+    "title": "Einkaufswagen",
+    "empty": "Ihr Warenkorb ist leer",
+    "total": "Gesamt",
+    "checkout": "Zur Kasse"
+  }
+}

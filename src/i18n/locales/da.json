@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "Hjem",
+    "iphone": "iPhone",
+    "macbook": "MacBook", 
+    "watch": "Apple Watch",
+    "imac": "iMac",
+    "cart": "Kurv",
+    "about": "Om os",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Premium Apple Store",
+    "subtitle": "Warszawa",
+    "description": "Opdag de nyeste iPhone, MacBook, Apple Watch og iMac. Premium kvalitet, konkurrencedygtige priser, enestående service.",
+    "shopNow": "Køb nu",
+    "learnMore": "Lær mere"
+  },
+  "products": {
+    "iphone": {
+      "title": "iPhone",
+      "description": "Den mest avancerede iPhone endnu"
+    },
+    "macbook": {
+      "title": "MacBook",
+      "description": "Kraft. Det er i luften"
+    },
+    "watch": {
+      "title": "Apple Watch",
+      "description": "Dit helbred. På dit håndled"
+    },
+    "imac": {
+      "title": "iMac",
+      "description": "Alt-i-ét brillians"
+    }
+  },
+  "features": {
+    "quality": "Premium Kvalitet",
+    "warranty": "Officiel garanti",
+    "delivery": "Hurtig levering",
+    "support": "24/7 Support"
+  },
+  "location": {
+    "title": "Besøg vores butik",
+    "address": "Apple Store Warszawa",
+    "street": "Nowy Świat 123",
+    "city": "00-001 Warszawa, Polen",
+    "phone": "+48 22 123 45 67",
+    "email": "info@applestore-warsaw.com"
+  },
+  "cart": {
+    "title": "Indkøbskurv",
+    "empty": "Din kurv er tom",
+    "total": "Total",
+    "checkout": "Til kassen"
+  }
+}

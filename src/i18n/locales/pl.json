@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "Strona główna",
+    "iphone": "iPhone",
+    "macbook": "MacBook", 
+    "watch": "Apple Watch",
+    "imac": "iMac",
+    "cart": "Koszyk",
+    "about": "O nas",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Premium Apple Store",
+    "subtitle": "Warszawa",
+    "description": "Odkryj najnowsze iPhone, MacBook, Apple Watch i iMac. Jakość premium, konkurencyjne ceny, wyjątkowa obsługa.",
+    "shopNow": "Kup teraz",
+    "learnMore": "Dowiedz się więcej"
+  },
+  "products": {
+    "iphone": {
+      "title": "iPhone",
+      "description": "Najnowocześniejszy iPhone"
+    },
+    "macbook": {
+      "title": "MacBook",
+      "description": "Moc. Jest w powietrzu"
+    },
+    "watch": {
+      "title": "Apple Watch",
+      "description": "Twoje zdrowie. Na nadgarstku"
+    },
+    "imac": {
+      "title": "iMac",
+      "description": "Wszystko w jednym geniusz"
+    }
+  },
+  "features": {
+    "quality": "Jakość Premium",
+    "warranty": "Oficjalna gwarancja",
+    "delivery": "Szybka dostawa",
+    "support": "Wsparcie 24/7"
+  },
+  "location": {
+    "title": "Odwiedź nasz sklep",
+    "address": "Apple Store Warszawa",
+    "street": "Nowy Świat 123",
+    "city": "00-001 Warszawa, Polska",
+    "phone": "+48 22 123 45 67",
+    "email": "info@applestore-warsaw.com"
+  },
+  "cart": {
+    "title": "Koszyk zakupowy",
+    "empty": "Twój koszyk jest pusty",
+    "total": "Razem",
+    "checkout": "Do kasy"
+  }
+}
