@@ -2,7 +2,7 @@
   "nav": {
     "home": "Home",
     "iphone": "iPhone",
-    "macbook": "MacBook", 
+    "macbook": "MacBook",
     "watch": "Apple Watch",
     "imac": "iMac",
     "cart": "Cart",
@@ -53,5 +53,49 @@
     "empty": "Your cart is empty",
     "total": "Total",
     "checkout": "Checkout"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Apple Store Warsaw",
+    "description": "We are the premier Apple retailer in Warsaw, Poland. Since 2021, we've been providing customers with the latest Apple products and exceptional service.",
+    "mission": "Our Mission",
+    "missionText": "To bring the best Apple products and services to Warsaw, with exceptional customer support and competitive prices.",
+    "team": "Our Team",
+    "teamText": "Our certified Apple specialists are here to help you find the perfect device for your needs.",
+    "values": "Our Values",
+    "valuesItems": [
+      "Premium Quality Products",
+      "Expert Customer Service",
+      "Competitive Pricing",
+      "Official Apple Warranty"
+    ]
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch",
+    "description": "Visit our store or contact us for any questions about Apple products.",
+    "address": "Store Address",
+    "hours": "Opening Hours",
+    "hoursText": "Monday - Saturday: 10:00 - 20:00\nSunday: 12:00 - 18:00",
+    "getDirections": "Get Directions",
+    "callUs": "Call Us",
+    "emailUs": "Email Us"
+  },
+  "catalog": {
+    "filters": "Filters",
+    "sortBy": "Sort by",
+    "priceRange": "Price Range",
+    "availability": "Availability",
+    "inStock": "In Stock",
+    "outOfStock": "Out of Stock",
+    "newProducts": "New Products",
+    "bestsellers": "Bestsellers",
+    "clearFilters": "Clear Filters",
+    "showingResults": "Showing {{count}} products",
+    "noResults": "No products found",
+    "addToCart": "Add to Cart",
+    "quickView": "Quick View",
+    "compare": "Compare",
+    "specifications": "Specifications"
   }
 }

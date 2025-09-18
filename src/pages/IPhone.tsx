@@ -15,10 +15,10 @@ const IPhone = () => {
       {/* Hero Section */}
       <section className="hero-section py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="gradient-text">iPhone</span>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
+            <span className="gradient-text">{t('products.iphone.title')}</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
             {t('products.iphone.description')} — Available now in Warsaw with competitive pricing.
           </p>
           
@@ -52,7 +52,7 @@ const IPhone = () => {
           {products.length === 0 && (
             <div className="text-center py-16">
               <div className="text-6xl mb-4">📱</div>
-              <h3 className="text-2xl font-bold mb-2">No iPhones found</h3>
+              <h3 className="text-xl sm:text-2xl font-bold mb-2">No iPhones found</h3>
               <p className="text-muted-foreground mb-4">
                 Try adjusting your filters to see more results
               </p>

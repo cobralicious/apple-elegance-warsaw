@@ -53,5 +53,49 @@
     "empty": "Twój koszyk jest pusty",
     "total": "Razem",
     "checkout": "Do kasy"
+  },
+  "about": {
+    "title": "O nas",
+    "subtitle": "Apple Store Warszawa",
+    "description": "Jesteśmy wiodącym sprzedawcą Apple w Warszawie, Polska. Od 2021 roku dostarczamy klientom najnowsze produkty Apple i wyjątkową obsługę.",
+    "mission": "Nasza misja",
+    "missionText": "Dostarczanie najlepszych produktów i usług Apple do Warszawy z wyjątkowym wsparciem klientów i konkurencyjnymi cenami.",
+    "team": "Nasz zespół",
+    "teamText": "Nasi certyfikowani specjaliści Apple są tu, aby pomóc Ci znaleźć idealne urządzenie dla Twoich potrzeb.",
+    "values": "Nasze wartości",
+    "valuesItems": [
+      "Jakość Premium produktów",
+      "Ekspercka obsługa klienta",
+      "Konkurencyjne ceny",
+      "Oficjalna gwarancja Apple"
+    ]
+  },
+  "contact": {
+    "title": "Skontaktuj się z nami",
+    "subtitle": "Skontaktuj się",
+    "description": "Odwiedź nasz sklep lub skontaktuj się z nami w sprawie pytań o produkty Apple.",
+    "address": "Adres sklepu",
+    "hours": "Godziny otwarcia",
+    "hoursText": "Poniedziałek - Sobota: 10:00 - 20:00\nNiedziela: 12:00 - 18:00",
+    "getDirections": "Wyznacz trasę",
+    "callUs": "Zadzwoń do nas",
+    "emailUs": "Napisz do nas"
+  },
+  "catalog": {
+    "filters": "Filtry",
+    "sortBy": "Sortuj według",
+    "priceRange": "Zakres cen",
+    "availability": "Dostępność",
+    "inStock": "W magazynie",
+    "outOfStock": "Brak w magazynie",
+    "newProducts": "Nowe produkty",
+    "bestsellers": "Bestsellery",
+    "clearFilters": "Wyczyść filtry",
+    "showingResults": "Pokazuje {{count}} produktów",
+    "noResults": "Nie znaleziono produktów",
+    "addToCart": "Dodaj do koszyka",
+    "quickView": "Szybki podgląd",
+    "compare": "Porównaj",
+    "specifications": "Specyfikacje"
   }
 }
