@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { ShoppingCart, Plus, Minus, Trash2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -56,8 +57,8 @@ const Cart = () => {
                 <p className="text-muted-foreground text-lg mb-8">
                   Start shopping to add items to your cart
                 </p>
-                <Button className="btn-hero" asChild>
-                  <a href="/iphone">Continue Shopping</a>
+                <Button asChild className="btn-hero">
+                  <Link to="/iphone">Continue Shopping</Link>
                 </Button>
               </div>
             </div>

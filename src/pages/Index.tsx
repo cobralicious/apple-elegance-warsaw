@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { Hero } from '@/components/Hero';
 import { ProductGrid } from '@/components/ProductGrid';
 import { AnimatedCounter } from '@/components/AnimatedCounter';
@@ -19,7 +20,7 @@ const Index = () => {
       {/* Stats Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 mb-16 sm:mb-20">
             {[
               { icon: TrendingUp, value: 25, suffix: '+', label: 'Product Models' },
               { icon: Users, value: 10000, suffix: '+', label: 'Happy Customers' },
@@ -28,18 +29,18 @@ const Index = () => {
             ].map((stat, index) => (
               <div
                 key={stat.label}
-                className="text-center product-card p-8 animate-fade-in-up"
+                className="text-center product-card p-4 sm:p-6 lg:p-8 animate-fade-in-up"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <stat.icon className="h-8 w-8 text-primary mx-auto mb-4" />
-                <div className="text-3xl font-bold text-primary mb-2">
+                <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 text-primary mx-auto mb-3 sm:mb-4" />
+                <div className="text-2xl sm:text-3xl font-bold text-primary mb-1 sm:mb-2">
                   <AnimatedCounter 
                     end={stat.value} 
                     suffix={stat.suffix}
                     duration={2000 + index * 200}
                   />
                 </div>
-                <div className="text-muted-foreground font-medium">{stat.label}</div>
+                <div className="text-sm sm:text-base text-muted-foreground font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -90,7 +91,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {[
               { 
                 name: t('products.iphone.title'), 
@@ -121,32 +122,32 @@ const Index = () => {
                 count: '4+ models'
               }
             ].map((category, index) => (
-              <a
-                key={category.path}
-                href={category.path}
-                className="product-card group cursor-pointer bg-card p-8 text-center animate-fade-in-up relative overflow-hidden"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+                      <Link
+                        key={category.path}
+                        to={category.path}
+                        className="product-card group cursor-pointer bg-card p-6 sm:p-8 text-center animate-fade-in-up relative overflow-hidden"
+                        style={{ animationDelay: `${index * 100}ms` }}
+                      >
                 {/* Background Pattern */}
                 <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,theme(colors.primary.DEFAULT)_1px,transparent_1px)] [background-size:20px_20px]" />
                 </div>
 
                 <div className="relative z-10">
-                  <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-4xl sm:text-5xl lg:text-6xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
                     {category.emoji}
                   </div>
-                  <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
                     {category.name}
                   </h3>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
                     {category.description}
                   </p>
-                  <div className="text-sm text-primary font-semibold">
+                  <div className="text-xs sm:text-sm text-primary font-semibold">
                     {category.count}
                   </div>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
